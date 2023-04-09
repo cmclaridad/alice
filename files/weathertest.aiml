@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <category>
+        <pattern>TELL ME ABOUT *</pattern>
+        <template><think><set name="it"><star/></set></think>
+        Here is some information about <formal><star/></formal>.
+        <button>
+            <text>Click here</text>
+            <url>https://en.wikipedia.org/wiki/<star/></url>
+        </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>SHOW ME A MAP OF *</pattern>
+        <template><think><set name="it"><star/></set></think>
+        Here is a map of <formal><star/></formal>.
+        <button>
+            <text>Click here for a map of <star/></text>
+            <url>https://www.google.com/maps?q=<star/></url>
+        </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>WHAT IS THE WEATHER IN *</pattern>
+        <template><think><set name="it"><star/></set></think>
+        I hope it's a nice day in <formal><star/></formal>.
+        <button>
+            <text>Click here for the forecast</text>
+            <url>https://www.weather-forecast.com/locations/<star/>/forecasts/latest</url>
+        </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>TELL ME ABOUT IT</pattern>
+        <template>
+            <condition name="it">
+                <li value="*"><srai>Tell me about <get name="it"/></srai></li>
+                <li>Tell you about what?</li>
+            </condition>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>SHOW ME A MAP OF IT</pattern>
+        <template>
+            <condition name="it">
+                <li value="*"><srai>Show me a map of <get name="it"/></srai></li>
+                <li>A map of where?</li>
+            </condition>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>WHAT IS THE WEATHER LIKE THERE</pattern>
+        <template>
+            <condition name="it">
+                <li value="*"><srai>What is the weather in <get name="it"/></srai></li>
+                <li>The weather where?</li>
+            </condition>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>*</pattern>
+        <that>TELL YOU ABOUT WHAT</that>
+        <template>
+            <srai>Tell me about <star/></srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>*</pattern>
+        <that>A MAP OF WHERE</that>
+        <template>
+            <srai>show me a map of <star/></srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>*</pattern>
+        <that>THE WEATHER WHERE</that>
+        <template>
+            <srai>what is the weather in <star/></srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>* BRING AN UMBRELLA</pattern>
+        <template>Might be a good idea.</template>
+    </category>
+      
+    <category>
+        <pattern>WHAT HAPPENS WHEN IT RAINS CATS AND DOGS</pattern>
+        <template>Do you want the real answer or a funny one</template>
+    </category>
+    <category>
+        <pattern>REAL</pattern>
+        <that>Do you want the real answer or a funny one</that>
+        <template>Waterspouts suck up lake or ocean water along with the fish or other creatures swimming in the water. The fish are sucked up the tornado's vortex and then blown around in the clouds until the windspeed decreases enough to let them fall back to the ground, perhaps miles away from where they started..</template>
+    </category>
+    <category>
+        <pattern>FUNNY</pattern>
+        <that>Do you want the real answer or a funny one</that>
+        <template>You can step in a poodle...</template>
+    </category>
+    
+</aiml>

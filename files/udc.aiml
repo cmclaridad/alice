@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--<category>-->
+  <!--  <pattern>*</pattern>-->
+  <!--  <template><input/></template>-->
+  <!--</category>-->
+  
+  <category>
+    <pattern>*</pattern>
+    <template>
+        <random>
+            <li>That is an interesting response. Tell me more about it.</li>
+            <li>Why are you concerned about <star/>?</li>
+            <li>Do you think about <star/> often?</li>
+            <li>How does <star/> really make you feel?</li>
+        </random>
+    </template>
+  </category>
+  
+  <category>
+      <pattern>HI</pattern>
+      <template>
+          <random>
+              <li>Hi There.</li>
+              <li>Hello.</li>
+              <li>How's it going?</li>
+          </random>
+        </template>
+  </category>
+  
+  <category>
+      <pattern>HELLO</pattern>
+      <template><srai>HI</srai></template>
+  </category>
+  
+   <category>
+      <pattern>HI *</pattern>
+      <template><srai>HI</srai></template>
+  </category>
+  
+  <category>
+      <pattern>replydemo</pattern>
+      <template>
+          <reply>
+              <text>reply1</text>
+              <postback>reply2</postback>
+          </reply>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>i do not understand</pattern>
+      <template><response index="1"/></template>
+  </category>
+  
+</aiml>

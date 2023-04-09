@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--<category>-->
+  <!--  <pattern>*</pattern>-->
+  <!--  <template>-->
+  <!--      <random>-->
+  <!--          <li>Why are you concerned about <star/>?</li>-->
+  <!--          <li>Do you think about <star/> often?</li>-->
+  <!--          <li>How does <star/> really make you feel?</li>-->
+  <!--      </random>-->
+  <!--  </template>-->
+  <!--</category>-->
+  
+  <!--<category>-->
+  <!--    <pattern>* WEATHER *</pattern>-->
+  <!--    <template>-->
+  <!--        <think><set name ="topic">weather</set></think>-->
+  <!--        What location do you want to check the weather?-->
+  <!--    </template>-->
+  <!--</category>-->
+  <!--<category>-->
+  <!--    <pattern>SEATTLE</pattern>-->
+  <!--    <that>Where do you want to check the weather, Seattle or Tacoma?</that>-->
+  <!--    <template>Well, I recommend layering for today's weather.</template>-->
+  <!--</category>-->
+  <!--<category>-->
+  <!--    <pattern>TACOMA</pattern>-->
+  <!--    <that>Where do you want to check the weather, Seattle or Tacoma?</that>-->
+  <!--    <template>In Tacoma, I just recommend staying inside.</template>-->
+  <!--</category>-->
+  
+  <topic name = "weather">
+      <category>
+          <pattern>* WEATHER IN *</pattern>
+          <template>You can view the week's weather in <star/> here.
+          <button>
+          <text>Click here for the full forecast</text>
+          <url>https://www.weather-forecast.com/locations/<star/>/forecasts/latest</url>
+          </button>
+          </template>
+    </category>
+      
+      <category>
+          <pattern>* BRING AN UMBRELLA</pattern>
+          <template>Might be a good idea.</template>
+      </category>
+      
+      <category>
+          <pattern>WHAT HAPPENS WHEN IT RAINS CATS AND DOGS</pattern>
+          <template>Do you want the real answer or a funny one</template>
+      </category>
+      <category>
+          <pattern>REAL</pattern>
+          <that>Do you want the real answer or a funny one</that>
+          <template>Waterspouts suck up lake or ocean water along with the fish or other creatures swimming in the water. The fish are sucked up the tornado's vortex and then blown around in the clouds until the windspeed decreases enough to let them fall back to the ground, perhaps miles away from where they started..</template>
+      </category>
+        <category>
+          <pattern>FUNNY</pattern>
+          <that>Do you want the real answer or a funny one</that>
+          <template>You can step in a poodle...</template>
+      </category>
+      
+      <category>
+          <pattern>WILL IT BE * ALL WEEK</pattern>
+          <template>You can view the week's weather in <star/> here.
+          <button>
+              <text>Click here for the full forecast</text>
+              <url>https://www.weather-forecast.com/locations/<star/>/forecasts/latest</url>
+          </button>
+          </template>
+      </category>
+  </topic>
+  
+  
+</aiml>
